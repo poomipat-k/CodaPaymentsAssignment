@@ -58,7 +58,6 @@ public class CsvProcessor {
 
     private void writeJson(Gson gsonObj, Map <String, String> row, String outputFilePath) throws  Exception{
         String jsonStr = gsonObj.toJson(row);
-        System.out.println(jsonStr);
         BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath));
         writer.write(jsonStr);
         writer.close();
